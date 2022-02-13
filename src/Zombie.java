@@ -4,9 +4,23 @@ public class Zombie extends Monster {
         super(name + " the Zombie",5);
     }
 
+    public String scream = "Raaaauuughhhh";
+
+
+    @Override
     public void growl(){
-        System.out.printf("Raaaauuughhhh ");
+        System.out.print(scream);
         super.growl();
+    }
+
+    public void growl(boolean loud){
+        if (!loud) {
+            growl();
+        }
+        else {
+            System.out.print(scream.toUpperCase());
+            super.growl();
+        }
     }
 
     public void attack() {
