@@ -5,6 +5,7 @@ public class Monster {
     public Monster (String name, int damage){
         this.name = name;
         this.damage = damage;
+        System.out.println(this.name + " was created");
     }
 
     public void growl(){

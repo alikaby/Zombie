@@ -1,11 +1,10 @@
 public class Zombie extends Monster {
 
-    public Zombie (String name) {
-        super(name + " the Zombie",5);
+    public static String scream = "Raaaauuughhhh";
+
+    public Zombie(String name) {
+        super(name + " the Zombie", 5);
     }
-
-    public String scream = "Raaaauuughhhh";
-
 
     @Override
     public void growl(){
@@ -23,7 +22,10 @@ public class Zombie extends Monster {
         }
     }
 
-    public void attack() {
+    @Override
+    public void attack(){
         super.attack();
+        growl();
     }
+
 }
